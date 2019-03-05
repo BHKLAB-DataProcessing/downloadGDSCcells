@@ -32,6 +32,9 @@ generateGDSCCell.lines <- function(path.data="/pfs/out",  path.cell = file.path(
   if(!file.exists(path.cell)){
     dir.create(path.cell)
   }
+  if(!file.exists(path.cell)){
+    dir.create(saveres)
+  }
   ## download cell line annotations and COSMIC IDs
   ## annotations from COSMIC cell line project
   em <- "benjamin.haibe.kains@utoronto.ca"
