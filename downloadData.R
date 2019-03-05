@@ -29,6 +29,9 @@ getCosmic <- function(em, passw, directory="/pfs/out") {
 generateGDSCCell.lines <- function(path.data="/pfs/out",  path.cell = file.path(path.data, "celline"), saveres=file.path("/pfs/out/saveres")){
   ftpdir <- "ftp://ftp.ebi.ac.uk//pub/databases/microarray/data/experiment/MTAB/E-MTAB-783/"
   options(stringsAsFactors=FALSE)
+  if(!file.exists(path.cell)){
+    dir.create(path.cell)
+  }
   ## download cell line annotations and COSMIC IDs
   ## annotations from COSMIC cell line project
   em <- "benjamin.haibe.kains@utoronto.ca"
