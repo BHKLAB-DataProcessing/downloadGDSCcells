@@ -12,7 +12,7 @@ getCosmic <- function(em, passw, directory="/pfs/out") {
   auth_key <- base64(paste(em, passw, sep=":"))
 
   json_resp <- getURL("https://cancer.sanger.ac.uk/cosmic/file_download/GRCh38/cell_lines/v87/CosmicCLP_MutantExport.tsv.gz", 
-                      httpheader=c("Authorization"=paste0("Basic ", auth_key)))
+                      httpheader=c(Authorization=paste0("Basic ", auth_key)))
   json_resp <- gsub(pattern="\\{\"url\":\"", rep="", json_resp)
   json_resp <- gsub(pattern="\"\\}", rep="", json_resp)
   resp <- RCurl::getBinaryURL(json_resp)
