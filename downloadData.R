@@ -1,5 +1,5 @@
 
-library(PharmacoGxPrivate)
+library(PharmacoGx)
 library(RCurl)
 options(stringsAsFactors=FALSE)
 
