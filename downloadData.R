@@ -5,7 +5,7 @@ options(stringsAsFactors=FALSE)
 
 #Using the celline.gdsc.RData file obtained from a previous commit when the download link was valid.
 #This is a temporary solution until the updated download link from COSMIC is found.
-load(file.path("celline.gdsc.RData"))
+load(file.path("/pfs/downloadGDSCcells/celline.gdsc.RData"))
 save(celline.gdsc, file="/pfs/out/celline.gdsc.RData")
 
 # getCosmic <- function(em, passw, directory="/pfs/out") {
